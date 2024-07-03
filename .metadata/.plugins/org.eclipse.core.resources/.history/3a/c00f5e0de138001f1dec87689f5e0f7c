@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#btn1{
+		color: red;
+	}
+	#btn2{
+		color: blue;
+	}
+
+</style>
+<script type="text/javascript">
+	function pro(){
+		alert("btn1을 눌렀습니다.");
+	}
+	function pro2(){
+		alert("btn2을 눌렀습니다.");
+	}
+</script>
+</head>
+<body>
+	<input id="btn1" type = "button" value="button1" onclick="pro()">
+	<input id="btn2" type = "button" value="button2" onclick="pro2()">
+</body>
+</html>

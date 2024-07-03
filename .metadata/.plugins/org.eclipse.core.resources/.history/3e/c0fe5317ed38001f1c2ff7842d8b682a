@@ -1,0 +1,11 @@
+function pro(){
+	a=2;
+	b=3;
+	alert(a+b)
+}
+
+function pro2(){
+	a=2;
+	b=3;
+	alert(a+b)
+}

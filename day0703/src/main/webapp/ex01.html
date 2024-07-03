@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- 
+	* 내용을 가질 수 있는 요소 <요소이름> 내용 </요소이름>
+	* 내용을 가질 수 없는 요소 <요소이름> - <img>, <br>, ...
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta>
+			<title></title>
+		</head>
+		<body>
+		
+		</body>
+	</html>
+ -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#btn1{
+		color: red;
+	}
+	#btn2{
+		color: blue;
+	}
+
+</style>
+
+<script type="text/javascript">
+	function pro(){
+		alert("btn1을 눌렀습니다.");
+	}
+	function pro2(){
+		alert("btn2를 눌렀습니다.");
+	}
+</script>
+</head>
+<body>
+	<input id="btn1" type = "button" value="button1" onclick="pro()">
+	<input id="btn2" type = "button" value="button2" onclick="pro2()">
+</body>
+</html>

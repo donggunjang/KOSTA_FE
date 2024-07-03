@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#btn1{
+		color: red;
+	}
+	#btn2{
+		color: blue;
+	}
+
+</style>
+<script type="text/javascript">
+	function pro(){
+		
+	}
+</script>
+</head>
+<body>
+	<input id="btn1" type = "button" value="button1">
+	<input id="btn2" type = "button" value="button2">
+</body>
+</html>

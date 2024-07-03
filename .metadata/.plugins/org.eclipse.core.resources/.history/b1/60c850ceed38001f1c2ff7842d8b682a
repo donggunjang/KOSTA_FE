@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="kosta.js"></script>
+</head>
+<body>
+	<button onclick="pro()">button</button>
+	<button onclick="pro2()">2+3</button>
+	
+</body>
+</html>

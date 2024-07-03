@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	#btn{
+		color: red;
+	}
+
+</style>
+
+</head>
+<body>
+	<input id="btn" type = "button" value="확인">
+	
+</body>
+</html>
