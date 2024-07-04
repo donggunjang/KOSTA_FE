@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="ex08_inputOK_3.jsp" method="post">
+	<table width="80%">
+		<tr>
+			<td width="20%">이름:</td>
+			<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+			<td>주소:</td>
+			<td><input type="text" value="서울시 종로구" name="addr"></td>
+		</tr>
+		<tr>
+			<td>나이: </td>
+			<td><input type="number" min="10" max="100" value="20" name="age"></td>
+		</tr>
+		<tr>
+			<td>이메일: </td>
+			<td><input type="email" name="email"></td>
+		</tr>
+		<tr>
+			<td>첨부파일: </td>
+			<td><input type="file" name="fname"></td>
+		</tr>
+		<tr>
+			<td>비밀번호: </td>
+			<td><input type="password" name="pwd"></td>
+		</tr>
+		<tr>
+			<td>취미: </td>
+			<td>
+				<input type="checkbox" name="hobby" value="마라톤">마라톤
+				<input type="checkbox" name="hobby" value="축구">축구
+				<input type="checkbox" name="hobby" value="야구">야구
+				<input type="checkbox" name="hobby" value="게임">게임
+			</td>
+		</tr>
+		<tr>
+			<td>성별:</td>
+			<td>
+				<input type="radio" name="gender" value="남">남
+				<input type="radio" name="gender" value="여">여
+			</td>
+		</tr>
+		<tr>
+			<td>혈액형:</td>
+			<td>
+				<input type="radio" name="bloodType" value="A">A
+				<input type="radio" name="bloodType" value="B">B
+				<input type="radio" name="bloodType" value="O">O
+				<input type="radio" name="bloodType" value="AB">AB
+			</td>
+		</tr>
+		<tr>
+			<td>직업:</td>
+			<td>
+				<select name="job">
+					<option value="회사원">회사원</option>
+					<option value="공무원">공무원</option>
+					<option value="학생">학생</option>
+					<option value="주부">주부</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>좋아하는 음식:</td>
+			<td>
+				<select size="3" name="food">
+					<option value="한식">한식</option>
+					<option value="중식">중식</option>
+					<option value="일식">일식</option>
+					<option value="양식">양식</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>자기소개: </td>
+			<td><textarea rows="20" cols="40" name="info"></textarea></td>
+		</tr>
+		<tr>
+			<td clospan="2"><input type="submit" value="확인"> <input type="reset" value="다시입력"> </td>
+		</tr>
+		
+	</table>
+	</form>
+</body>
+</html>

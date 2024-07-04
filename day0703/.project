@@ -30,6 +30,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>src/main/webapp/Kalimba.mp3</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/WD/Downloads/Kalimba.mp3</locationURI>
+		</link>
+		<link>
+			<name>src/main/webapp/Wildlife.mp4</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Users/WD/Downloads/Wildlife.mp4</locationURI>
+		</link>
+		<link>
 			<name>src/main/webapp/aa1.png</name>
 			<type>1</type>
 			<locationURI>PARENT-2-PROJECT_LOC/Users/WD/Downloads/aa1.png</locationURI>
