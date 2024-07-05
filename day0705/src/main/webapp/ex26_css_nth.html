@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	li{
+		list-style: none;
+		float: Left;
+		color: white;
+		/* background: pink; */
+		/* margin: 10px; */
+		padding: 15px;
+		/* border-radius: 15px;*/
+	}
+	
+	li:nth-child(2n) {
+		background: #FF6B1A;
+	}
+	
+	li:nth-child(2n+1) {
+		background: #B33F00;
+	}
+	
+	li:first-child {
+		border-radius: 15px 0px 0px 15px;
+	}
+	
+	li:last-child {
+		border-radius: 0px 15px 15px 0px;
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>첫번째</li>
+		<li>두번째</li>
+		<li>세번째</li>
+		<li>네번째</li>
+		<li>다섯번째</li>
+		<li>여섯번째</li>
+		<li>일곱번째</li>
+	</ul>
+</body>
+</html>

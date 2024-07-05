@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	input[min]{
+		background: pink;
+	}
+</style>
+</head>
+<body>
+<form action="#" method="post">
+    <table>
+    <tr><td>이름 : </td><td><input type="text" name="name" required="required"></td></tr>
+    <tr><td>주소 : </td><td><input type="text" name="addr" value="서울시 마포구 서교동"></td></tr>
+    <tr><td>나이 : </td><td><input type="number" name="age" min="10" max="100"></td></tr>
+    <tr><td>이메일 : </td><td><input type="email" name="email"></td></tr>
+    <tr><td>첨부파일 : </td><td><input type="file"></td></tr>
+    <tr><td>비밀번호 : </td><td><input type="password" name="pwd"></td></tr>
+    <tr><td>취미 :</td>
+    <td><input type="checkbox" name="hobby" value="마라톤">마라톤
+    <input type="checkbox" name="hobby"  value="수영">수영
+    <input type="checkbox" name="hobby"  value="게임">게임
+    <input type="checkbox" name="hobby"  value="축구">축구
+    </td></tr>
+    <tr>
+        <td>수강과목</td>
+        <td>
+            <input type="checkbox" name="subject" value="자바">자바
+            <input type="checkbox" name="subject" value="오라클">오라클
+            <input type="checkbox" name="subject" value="html">html
+            <input type="checkbox" name="subject" value="css">css
+            <input type="checkbox" name="subject" value="JS">JS
+            <input type="checkbox" name="subject" value="JSP">JSP
+        </td>
+    </tr>
+    <tr><td>성별 :</td>
+    <td>
+    <input type="radio" name="gender" value="남">남
+    <input type="radio" name="gender" value="여">여
+    </td></tr>
+    <tr>
+    <td>직업</td>
+    <td>
+        <select name="job">
+            <option value="회사원">회사원</option>
+            <option value="공무원">공무원</option>
+            <option value="학생">학생</option>
+            <option value="주부">주부</option>
+        </select>
+    </td>
+    </tr>
+    <tr>
+        <td>좋아하는 음식</td>
+        <td>
+            <select size="4" name="food">
+                <option value="한식">한식</option>
+                <option value="중식">중식</option>
+                <option value="일식">일식</option>
+                <option value="양식">양식</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>자기소개</td>
+        <td>
+            <textarea name="self" rows="10" cols="80"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="reset" value="다시입력">
+            <input type="submit" value="확인">
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
