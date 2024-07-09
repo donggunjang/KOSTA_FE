@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = ["홍길동", "김유신", "이순신", "유관순", "광개토"];
+	function pro(){
+		var str = "<ul>";
+		for(i=0; i<data.length; i++){
+			str += "<li>"+data[i]+"</li>";
+		}
+		str += "</ul>"
+		document.getElementById("list").innerHTML = str;
+	}
+</script>
+</head>
+<body>
+	<h2>위인들</h2>
+	<div id="list"></div>
+	<button onclick="pro()">출력하기</button>
+</body>
+</html>

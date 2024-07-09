@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function pro(){		
+		var str = "<table border='1'>";
+		str += "<tr>";
+		for(i=1; i<=31; i++){
+			str += "<td>"+i+"</td>";
+			if(i % 7 == 0){
+				str += "</tr><tr>";
+			}
+			
+		}
+		str += "</tr>";
+		str += "</table>";
+		document.getElementById("list").innerHTML = str;
+	}
+</script>
+</head>
+<body>
+	<h2>숫자출력</h2>
+	<hr>
+	<button onclick="pro()">출력하기</button>
+	<div id = "list">
+	
+	</div>
+</body>
+</html>

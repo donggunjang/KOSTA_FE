@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#container{
+		position: relative;
+		width: 500px;
+		height: 500px;
+		border: 3px solid black;
+	}
+	
+	.circle{
+		width: 100px;
+		height: 100px;
+		border: 1px solid black;
+		border-radius: 50% 50%;
+		position: absolute;
+	}
+	
+	#red{
+		background: red;
+		left: 20px;
+		top: 20px;
+	}
+	
+	#green{
+		background: green;
+		top: 20px;
+		right: 20px;
+	}
+	
+	#blue{
+		background: blue;
+		right: 20px;
+		bottom: 20px;
+	}
+	
+	#yellow{
+		background: yellow;
+		left: 20px;
+		bottom: 20px;
+	}
+	
+	.bg{
+		background-image: url("bg.jpg");
+	}
+</style>
+</head>
+<body>
+	<h2>Hello HTML</h2>
+	<div id="container">
+		<div class="circle" id="red" ></div>
+		<div class="circle" id="green" ></div>
+		<div class="circle" id="blue" ></div>
+		<div class="circle" id="yellow"></div>
+	</div>
+	<h2>Hello HTML</h2>
+</body>
+</html>

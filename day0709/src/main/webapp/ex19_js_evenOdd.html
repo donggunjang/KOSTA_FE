@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check(){
+		var n = eval(document.getElementById("n").value);
+		var result = "";
+		if(n % 2 == 0){
+			result = "짝수";
+		}else{
+			result = "홀수";
+		}
+		
+		document.getElementById("output").innerHTML = result;
+	}
+</script>
+
+</head>
+<body>
+	<h2>짝수, 홀수 판별</h2>
+	<hr>
+	수를 입력하세요==>
+	<input type="text" id="n">
+	<button onclick="check()">확인하기</button><br>
+	결과 : <span id="output"></span>
+</body>
+</html>

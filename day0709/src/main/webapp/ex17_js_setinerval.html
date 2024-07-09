@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>오늘의 날짜</h1>
+	<span id="output"></span>
+	<script type="text/javascript">
+		function pro(){
+			var today = new Date();
+			var year = today.getFullYear();
+			var month = today.getMonth()+1;
+			var date = today.getDate();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			var data = year+"년"+month+"월"+date+"일"+hours+":"+minutes+":"+seconds;
+			document.getElementById("output").innerHTML = data;
+		}
+		
+		setInterval(pro, 1000);
+	</script>
+</body>
+</html>

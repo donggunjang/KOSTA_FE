@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1.0, maximum-scale=2.0">
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	body{
+		width: 960px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	
+	#menu{
+		width: 260px;
+		float: left;
+	}
+	
+	#section{
+		width: 700px;
+		float: right;
+	}
+	
+	li{
+		list-style: none;
+	}
+	
+	@media screen and (max-width: 767px){
+		/* 스마트폰 사이즈에서는 메뉴의 위치, 섹션의 위치, 바디의 크기등을 해제 */
+		body{
+			width: auto;
+		}
+		
+		#menu{
+			width: auto;
+			float: none;
+		}
+		
+		#section{
+			width: auto;
+			float: none;
+		}
+	}
+	
+</style>
+</head>
+<body>
+	<div id="section">
+		<h1>대한축구협회 "홍명보 감독, 대표팀 사령탑 적임자…8가지 이유</h1>
+		<p>대한축구협회는 국가대표팀의 신임 사령탑으로 홍명보 K리그1 울산 HD 감독을 내정한 이유로 경기 철학, 리더십 등 8개 항목을 들면서 적임자임을 강조했습니다.			
+		이임생 축구협회 기술총괄이사는 오늘(8일) 서울 종로구 축구회관에서 열린 취재진 대상 브리핑에서 선수단 장악 능력 등 홍 감독의 장점과 현재 협회가 처한 상황 등을 합쳐 총 8개의 선임 사유를 설명했습니다. </p>
+	</div>
+	
+	<div id="menu">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+		</ul>
+	</div>
+</body>
+</html>

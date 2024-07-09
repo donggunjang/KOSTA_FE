@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function check(){
+		var sum = 0;
+		var avg = 0;
+		var result = "";
+		var kor = eval(document.getElementById("kor").value);
+		var eng = eval(document.getElementById("eng").value);
+		var math = eval(document.getElementById("math").value);
+		var name = document.getElementById("name").value;
+		
+		sum = kor + eng + math;
+		avg = sum / 3;
+		
+		if(avg>=90){
+			result = "A";
+		}else if(avg>=80){
+			result = "B";
+		}else if(avg>=70){
+			result = "C";
+		}else if(avg>=60){
+			result = "D";
+		}else{
+			result = "F";
+		}
+		
+		document.getElementById("outname").innerHTML = name;
+		document.getElementById("sum").innerHTML = sum;
+		document.getElementById("avg").innerHTML = avg;
+		document.getElementById("result").innerHTML = result;
+	}
+</script>
+</head>
+<body>
+	<!-- 이름,국어,영어,수학 점수를 입력받아
+		총점과 평균을 구하여 출력하고
+		평균에 따라 A,B,C,D,F를 판별하여 출력하도록 한다.
+		화면 구성은 자유롭게 한다.-->
+
+	<h2>성적 판별</h2>
+	<hr>
+	<div>
+		<span>이름 :</span>
+		<input type="text" id="name"><br>
+		<span>국어 점수:</span>
+		<input type="text" id="kor"><br>
+		<span>영어 점수:</span>
+		<input type="text" id="eng"><br>
+		<span>수학 점수:</span>
+		<input type="text" id="math"><br>
+		<button onclick="check()">입력완료</button>
+	</div>
+	
+	<div>
+		<h3>결과</h3>
+		<hr>
+		이름: <span id="outname"></span><br>
+		총점: <span id="sum"></span><br>
+		평균: <span id="avg"></span><br>
+		결과: <span id="result"></span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		function pro(){
+			var today = new Date();
+			document.getElementById("output").innerHTML = today;
+		}
+		setInterval(pro, 1000);
+	}
+</script>
+</head>
+<body>
+	현재시각: <span id="output"></span>
+</body>
+</html>
