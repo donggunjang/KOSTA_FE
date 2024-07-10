@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+		let data = {
+			name:"홍길동",
+			age:20,
+			addr:"서울시 종로구 관철동"
+		}
+		
+	window.onload = function(){
+		var str = "<table border='1'>";
+		str += "<tr>";
+		for(let key in data){
+			str += "<th>"+key+"<th>";
+		}
+		
+		str += "</tr>";
+		str += "<tr>";
+		for(let key in data){
+			str += "<td>"+data[key]+"</td>";
+		}
+		str += "</tr>"
+		str += "</table>"
+		document.getElementById("result").innerHTML = str;
+	}
+	</script>
+	
+	<h2>Person</h2>
+	<hr>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="myutil.js"></script>
+<script type="text/javascript">
+	let member = ["홍길동", "이순신", "김유신", "유관순", "안중근"];
+	// 배열을 매개변수로 전달받아 순서없는 목록을 만들어서 반환하는 함수를 갖고 있는 자바스크립트 파일을 만들고
+	// 그것을 이문서에 포함시켜 "회원목록 출력"을 누르면 함수를 호출하여 div에 출력이 되게 한다.
+	
+	window.onload = function(){
+		let btnList = document.getElementById("btnList");
+		btnList.onclick = function(){
+			let result = makeListFromArr(member);
+			document.getElementById("output").innerHTML = result; 
+		}
+	}
+</script>
+</head>
+<body>
+	<h2>회원목록</h2>
+	<hr>
+	<div id="output"></div>
+	<button id="btnList">출력</button>
+</body>
+</html>
+

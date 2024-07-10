@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		let output ="";
+		for(let i=0; i<256; i++){
+			output += "<div></div>";
+		}
+		//document.getElementByTagName("body");
+		document.body.innerHTML =output;
+		let divs = document.querySelectorAll("div");
+		for(let i=0; i<divs.length; i++){
+			divs[i].style.height ="2px";
+			divs[i].style.background ="rgb("+i+","+i+","+i+")";
+		}
+	}
+</script>
+</head>
+<body>
+	
+</body>
+</html>

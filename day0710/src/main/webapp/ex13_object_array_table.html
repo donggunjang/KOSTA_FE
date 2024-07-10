@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="myutil.js"></script>
+<script type="text/javascript">
+	let data = [
+		{dno:10, dname:'기획팀', dloc:'종각'},
+		{dno:20, dname:'영업팀', dloc:'종각'},
+		{dno:30, dname:'개발1팀', dloc:'판교'},
+		{dno:40, dname:'개발2팀', dloc:'가산'},
+		{dno:50, dname:'개발3팀', dloc:'가산'}]
+	
+	window.onload = function(){
+		let result = makeTableFromObjectArr(data);
+		document.getElementById("output").innerHTML=result;
+	}
+</script>
+</head>
+<body>
+
+	
+	<h2>부서목록</h2>
+	<hr>
+	<div id="output"></div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/* let data = ["홍길동", "김유신", "이순신"	];
+		alert(data[0]);
+		alert(data[1]);
+		alert(data[2]);
+		alert(typeof(data))// object; */
+		
+		// 자바스크립트 객체의 표현
+		// JavaScript Object Notation ==> JSON
+		
+		let data = [
+			{dno:10, dname:'기획팀', dloc:'종각'},
+			{dno:20, dname:'영업팀', dloc:'종각'},
+			{dno:30, dname:'개발1팀', dloc:'판교'},
+			{dno:40, dname:'개발2팀', dloc:'가산'},
+			{dno:50, dname:'개발3팀', dloc:'가산'}
+		]
+		
+		
+		
+		for(i=0; i<data.length; i++){
+			let row = data[i];
+			alert(row); //object
+			console.log(row.dno);
+			console.log(row.dname);
+			console.log(row.dloc);
+			for(let key in row){
+				console.log(row[key]);
+			}
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		background: orange;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function() {
+		let divs = document.querySelectorAll("div");
+		for(let i=0; i<divs.length; i++){
+			divs[i].setAttribute("idx", i);
+		}
+	}
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

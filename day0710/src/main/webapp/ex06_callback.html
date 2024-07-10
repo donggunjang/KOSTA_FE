@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//배열을 매개변수로 전달받아 배열의 요소를 모두 누적하여 출력하는 함수
+		let add = function(arr, callback){
+			let tot = 0;
+			for(i=0; i<arr.length; i++){
+				tot += arr[i];
+			}
+			alert("배열의 총합:" + tot);
+			callback();	
+		}
+		
+		let end = function(){
+			alert("작업완료");
+		}
+		
+		let data = [10,20,30,40,50];
+		add(data, end);
+	</script>
+</body>
+</html>
