@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		let tr_list = document.querySelectorAll("tbody > tr");
+		
+		document.querySelector("#btnAdd").onclick = function(){
+			let tr = document.createElement("tr");
+			let input = document.querySelectorAll("input");
+			for(let i=0; i<input.length; i++){
+				let txt =document.createTextNode(input[i].value);
+				let td = document.createElement("td");
+				td.appendChild(txt);
+				tr.appendChild(td);
+			}
+			document.querySelector("#student_tbody").appendChild(tr);
+		}
+		
+		function clearTr(){
+			for(i=0; i<tr_list.length ;i++){
+				let tr = tr_list[i];
+				tr.style.background = "white";
+				tr.setAttribute("check",0);
+			}
+		}
+		
+		
+		for(i=0; i<tr_list.length ;i++){
+			let tr = tr_list[i];
+			tr.setAttribute("check",0);
+			
+			tr.onmouseover = function(){
+				if(this.getAttribute("check") != 1){
+					this.style.background = "pink";		
+				}
+			}			
+			
+			tr.onmouseout = function(){
+				if(this.getAttribute("check") != 1){
+					this.style.background = "white";	
+				}
+			}
+			
+			tr.onclick = function(){
+				clearTr();
+				this.style.background = "red";	
+				tr.setAttribute("check",1);
+			}			
+			
+		}
+		
+		
+	}
+</script>
+</head>
+<body>
+	이름 : <input type="text" id="name"><br>
+	국어 : <input type="text" id="kor"><br>
+	영어 : <input type="text" id="eng"><br>
+	수학 : <input type="text" id="math"><br>
+	<button id="btnAdd">추가</button>
+	
+	<table border="1" width="80%">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>수학</th>
+			</tr>
+		</thead>
+		<tbody id = "student_tbody">
+			<tr><td>홍길동</td><td>100</td><td>100</td><td>100</td></tr>
+			<tr><td>유관순</td><td>75</td><td>60</td><td>90</td></tr>
+			<tr><td>이순신</td><td>80</td><td>30</td><td>40</td></tr>
+			<tr><td>정약용</td><td>95</td><td>80</td><td>90</td></tr>
+			<tr><td>안중근</td><td>100</td><td>90</td><td>85</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

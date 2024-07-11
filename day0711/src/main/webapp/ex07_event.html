@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){		
+		let tr_list = document.querySelectorAll("tbody > tr");
+		
+		function clearTr(){
+			for(i=0; i<tr_list.length ;i++){
+				let tr = tr_list[i];
+				tr.style.background = "white";
+				tr.setAttribute("check",0);
+			}
+		}
+		
+		
+		for(i=0; i<tr_list.length ;i++){
+			let tr = tr_list[i];
+			tr.setAttribute("check",0);
+			
+			tr.onmouseover = function(){
+				if(this.getAttribute("check") != 1){
+					this.style.background = "pink";		
+				}
+			}			
+			
+			tr.onmouseout = function(){
+				if(this.getAttribute("check") != 1){
+					this.style.background = "white";	
+				}
+			}
+			
+			tr.onclick = function(){
+				clearTr();
+				this.style.background = "red";	
+				tr.setAttribute("check",1);
+			}			
+			
+		}
+	}
+</script>
+</head>
+<body>
+	<table border="1" width=80%>
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>수학</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>홍길동</td><td>100</td><td>70</td><td>60</td></tr>
+			<tr><td>이순신</td><td>80</td><td>80</td><td>100</td></tr>
+			<tr><td>유관순</td><td>90</td><td>90</td><td>80</td></tr>
+			<tr><td>김유신</td><td>70</td><td>70</td><td>90</td></tr>
+			<tr><td>강감찬</td><td>95</td><td>90</td><td>100</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

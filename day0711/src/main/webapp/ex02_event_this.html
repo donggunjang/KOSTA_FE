@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		let btnOK = document.querySelector("#btnOK");
+		btnOK.style.background = "yellow";
+		btnOK.onmouseover = function(){
+			this.style.background = "pink";
+		}
+		btnOK.onmouseleave = function(){
+			this.style.background = "yellow";
+		}
+	}
+</script>
+</head>
+<body>
+	<button id="btnOK">확인</button>
+</body>
+</html>

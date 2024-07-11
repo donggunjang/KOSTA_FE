@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		document.querySelector("#btnAdd").onclick = function(){
+			let data = document.querySelector("#data").value;
+			let li = document.createElement("li");
+			let txt = document.createTextNode(data);
+			li.appendChild(txt);
+			document.querySelector("#list").appendChild(li);
+		}
+	}
+</script>
+
+</head>
+<body>
+	
+	<h2>인생에서 중요하게 여기는 것</h2>
+	<input type="text" id="data">
+	<button id="btnAdd">추가</button>
+	<hr>
+	<ul id="list">
+		<li>가족</li>
+		<li>돈</li>
+		<li>휴식</li>
+	</ul>
+</body>
+</html>

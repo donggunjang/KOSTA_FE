@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		let tr_list = document.querySelectorAll("tbody > tr");
+		for(let i=0; i<tr_list.length; i++){
+			let tr = tr_list[i];
+			tr.onmouseover = function() {
+				this.style.background = "pink";
+			}
+
+			tr.onmouseout = function() {
+				this.style.background = "white";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<table border="1" width="80%">
+		<thead>
+			<tr>
+				<th>이름</th>
+				<th>국어</th>
+				<th>영어</th>
+				<th>수학</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr><td>홍길동</td><td>100</td><td>100</td><td>100</td></tr>
+			<tr><td>유관순</td><td>75</td><td>60</td><td>90</td></tr>
+			<tr><td>이순신</td><td>80</td><td>30</td><td>40</td></tr>
+			<tr><td>정약용</td><td>95</td><td>80</td><td>90</td></tr>
+			<tr><td>안중근</td><td>100</td><td>90</td><td>85</td></tr>
+		</tbody>
+	</table>
+</body>
+</html>

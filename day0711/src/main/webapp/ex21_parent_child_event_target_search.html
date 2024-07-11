@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div, p, a{
+		border: solid 1px pink;
+		margin: 30px;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload = function(){
+		
+		document.querySelector("#btnAdd").onclick = function(){
+			let data = '<div id="inner"><p id="p"><a id = "a" href="#">Hello</a></p></div>';
+			document.querySelector("#outer").innerHTML += data;
+		}
+		
+		document.querySelector("#outer").addEventListener("click", function(){
+			let target = event.target;
+			
+			while(true){
+				// 부모노드를 찾아 줌
+				target = target.parentElement;
+				if(target.tagName === "P"){
+					break;
+				};
+			}
+			
+			target.style.background = "pink";
+			
+		});
+	}
+</script>
+</head>
+<body>
+	<div id="outer">
+		<div id="inner">
+			<p id="p">
+				<a id = "a" href="#">Hello</a>
+			</p>
+		</div>
+		<div id="inner">
+			<p id="p">
+				<a id = "a" href="#">Hello</a>
+			</p>
+		</div>
+	</div>
+	<hr>
+	<button id="btnAdd">추가</button>
+</body>
+</html>

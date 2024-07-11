@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div, p, a{
+		border: solid 1px pink;
+		margin: 10px;
+	}
+</style>
+
+<script type="text/javascript">
+	window.onload = function(){
+		document.querySelector("#outer").addEventListener("click", function(){
+			alert("outer")
+		})
+		document.querySelector("#inner").addEventListener("click", function(){
+			alert("inner")
+		})
+		document.querySelector("#p").addEventListener("click", function(){
+			alert("p")
+		})
+		document.querySelector("#a").addEventListener("click", function(){
+			alert("aex17_parent_child.html")
+		})
+	}
+</script>
+</head>
+<body>
+	<div id="outer">
+		<div id="inner">
+			<p id="p">
+				<a id = "a" href="#">Hello</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

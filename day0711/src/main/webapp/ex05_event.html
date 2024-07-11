@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function add(){
+		let n1 = eval(document.querySelector('#n1').value);
+		let n2 = eval(document.querySelector('#n2').value);
+		let r = n1+n2;
+		document.querySelector('#result').innerHTML = r;
+	}
+	
+	window.onload = function(){
+		document.querySelector("#btnAdd").onclick = function(){
+			add();
+		}
+	}
+	
+</script>
+</head>
+<body>
+	수1: <input type="text" id="n1"><br>
+	수2: <input type="text" id="n2"><br>
+	<button id="btnAdd">더하기</button>
+	결과 : <span id="result"></span>
+</body>
+</html>
