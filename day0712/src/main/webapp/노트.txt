@@ -1,0 +1,84 @@
+<< 자바를 기반으로 하는 웹 어플리케이션 프로그래밍 기술>>
+	서블릿
+		==> 자바언어로 웹 문서를 만들게 해 주는 클래스
+		==> 이 클래스를 상속받아서 클래스를 만들어서 서비스
+		==> 클래스를 만들고 컴파일 하고 서비스를 위하여 배포하는 과정을 거쳐야 한다.
+		
+	JSP(Java Server Pages)
+		==> 자바언어로 (웹)서버에서 동작하는 문서를 만들기 위한 기술
+		==> 서블릿으로 웹문서를 만드는 것은 어렵고 또 절차가 복잡해서
+				손쉽게 웹문서를 만들도록 하는 기술
+		==> html 태그와 자바문법을 호용하여 작성함으로써 웹 문서를 빠르게 만들 수 있다.
+		
+		==> 그러나 사실은,
+				jsp를 요청하게 되면
+				내부적으로는 서블릿 클래스가 만들어지고 즉, .java가 만들어지고
+				컴파일(.calss)이 만들어져서 동작하게 된다.		
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<< 서블릿으로 웹 문서 만들기 >>
+
+HttpServlet클래스를 상속받아 클래스를 만들어 준다.
+get방식의 요청일때에 일처리를 위한 doGet메소드와
+post방식의 요청일때에 일처리를 위한 doPost메소드를 각각 오버라이딩 해준다.
+doGet, doPost 메소드는
+사용자의 요청정보를 담고있는 requset와
+응답을 위한 response를 매개변수로 갖고 있다.
+
+연습) 웹브라우저의 주소표시줄에 다음과 같이 용청하는 방식은 get방식이다.
+	 이렇게 요청했을때
+	 	http://localhost:8088/day0712/Hello
+	 
+	 사용자의 브라우저에
+	 	<h1>Hello Servlet</h1>
+	 을 동적으로 응답하는 웹을 서블릿으로 만들어 보자
+	 
+
+package com.kosta.web;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/hello")
+public class hello extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	@see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	} // GET 방식으로 동작
+
+	
+	@see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	} //Post방식으로 동작
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+jsp를 요청하면 다음과 같은 서블릿 클래스가 만들어 지고
+실제로 서비스 되는 내용은 __jspService 메소드에 쓰여 진다.
+
+서비스 메소드의 매개변수는 사용자의 요청정보를 담고 있는 request와
+응답을 위한 response를 갖고 있고
+또, 서비스메소드 수행을 위하여 필요한 지역변수
+pageContent, session, application, config, out, page등이 있다.
+이러한 8개의 변수들을 jsp 내장 객체라고 한다.
+이 jsp 내장 객체는 별도로 객체를 생성하지 않아도 바로 사용할 수 있다.
+
+--------------------------------------------------------------------------------------------------------------------------
+jsp 문장 구성 요소
+
+스크립트릿		<%		%>	<-- 모든 자바문법을 써 준다.
+
